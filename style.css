@@ -1,0 +1,138 @@
+h1, h2, h3 {
+  text-align: center;
+}
+
+.page-wrapper {
+  display: grid;
+  grid-template-columns: auto;
+}
+
+section.intro h1 {
+  display: block;
+  text-transform: uppercase;
+}
+
+#zen-summary p:nth-child(2) {
+  border-top: solid black 1px;
+  border-bottom: solid black 1px;
+  text-align: center;
+}
+
+#zen-preamble p, #zen-requirements p {
+  margin-top: -15px;
+}
+
+#zen-intro::after {
+  content: "";
+  display: block;
+  /* width: 100%; */
+  height: 26em;
+  /* margin: 0 auto -26em; */
+  margin: 2em 4em;
+  background: url("images/ales-krivec-ZMZHcvIVgbg-unsplash.jpg") no-repeat center;
+}
+
+#zen-participation::after {
+  content: "";
+  display: block;
+  /* width: 100%; */
+  height: 26em;
+  /* margin: 0 auto -26em; */
+  margin: 2em 4em;
+  background: url("images/alexander-andrews-soLEw77Napo-unsplash.jpg") no-repeat center;
+}
+
+#zen-explanation, #zen-benefits {
+  background-color: #0D1F2D;
+  color: #D4CAC4;
+  padding: 10px;
+  padding-top: 1px;
+}
+
+#design-selection h3 {
+  background-color: #756858;
+  padding: 1em;
+  margin-bottom: -1em;
+}
+
+#design-selection nav ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  text-decoration: none;
+  list-style-type: none;
+  background-color: #0D1F2D;
+  color: #D4CAC4;
+  padding: 1em;
+  column-gap: 2em;
+  row-gap: 2em;
+}
+
+#design-selection nav ul a {
+  text-decoration: none;
+}
+
+#design-selection nav ul li {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 1em;
+  background-color: #D4CAC4;
+  color: #0D1F2D;
+  text-align: right;
+}
+
+#design-selection nav ul li a:nth-child(1) {
+  grid-column: 1/3;
+  background-color: #A6988D;
+  text-align: center;
+}
+
+.designer-name {
+  text-align: left;
+  margin-left: -10px;
+}
+
+#design-archives {
+  background-color: #0D1F2D;
+  color: #D4CAC4;
+  padding: 1em 0.5em;
+  margin-top: -1em;
+}
+
+#design-archives h3 {
+  background-color: #A6988D;
+  color: #0D1F2D;
+  padding: 0.5em;
+}
+
+#design-archives ul {
+  display: flex;
+  list-style-type: none;
+  text-decoration: none;
+  justify-content: space-around;
+}
+
+#design-archives ul a {
+  text-decoration: none;
+}
+
+#zen-resources::before {
+  content: "";
+  display: block;
+  /* width: 100%; */
+  height: 26em;
+  /* margin: 0 auto -26em; */
+  margin: 2em 4em;
+  background: url("images/annie-spratt-xt79nQxc9Q0-unsplash.jpg") no-repeat center;
+}
+
+#zen-resources ul a {
+  text-decoration: none;
+}
+
+#zen-resources ul li {
+  list-style-type: none;
+}
+
+/*# sourceMappingURL=style.css.map */
