@@ -153,6 +153,50 @@ section.intro h1 {
     }
 }
 
+@media only screen and (min-width: 600px) {
+
+    //header wrapper
+    #zen-intro {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(4, auto);
+        row-gap: 0;
+    }
+
+    #zen-intro header {
+        grid-column: 1/7;
+        grid-row: 1/2;
+    }
+
+    //demo
+    #zen-summary {
+        grid-column: 1/4;
+        grid-row: 2/3;
+
+    }
+
+    //road
+    #zen-preamble {
+        grid-column: 1/4;
+        grid-row: 3/5;
+        columns: 5em 3;
+    }
+
+    #zen-intro::after{
+        grid-column: 4/7;
+        grid-row: 2/5;
+    }
+
+
+
+
+
+
+
+
+
+}
+
 
 // #design-selection nav ul li {
 //     color: red;
