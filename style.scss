@@ -1,20 +1,27 @@
+// Fonts
 @import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Nunito:wght@200&family=Playfair+Display&display=swap");
-
-$color-1: #756858; // Dark tan
-$color-2: #0D1F2D; // Dark Navy
+// Variables
+// $color-1: #756858; // Dark tan
+$color-1: rgba(117, 104, 88, 0.5);
+// $color-2: #0D1F2D; // Dark Navy
+$color-2: rgba(13, 31, 45, 0.5);
 $color-3: #550527; // Red
-$color-4: #A6988D; // light tan
+// $color-4: #A6988D; // light tan
+$color-4: rgba(166, 152, 141, 0.5);
+
 $color-5: #D4CAC4; // lighter tan
+$primary-font: 'Playfair Display',
+sans-serif;
+$secondary-font: 'Nunito',
+sans-serif;
+$p-font: 'Cinzel Decorative',
+serif;
 
-$primary-font: 'Playfair Display', sans-serif;
-$secondary-font: 'Nunito', sans-serif;
-$p-font: 'Cinzel Decorative', serif;
-
+// Mixins
 @mixin hover {
-        color: lighten($color-3, 30%);
-        text-decoration: underline;
+    color: lighten($color-3, 30%);
+    text-decoration: underline;
 }
-
 
 @mixin link {
     color: black;
@@ -25,27 +32,30 @@ $p-font: 'Cinzel Decorative', serif;
     padding-top: 1em;
     border-top: solid black .1em;
 }
-body{
+
+// scss
+body {
     font-family: $secondary-font;
     font-weight: bold;
     background: url('images/background.jpg') repeat;
-
 }
 
-h2, h3{
+h2,
+h3 {
     font-family: $primary-font;
     font-weight: bolder;
 }
 
-a{
-        @include link;
+a {
+    @include link;
 
     &:hover {
         @include hover;
     }
 }
+
 h1,
-h2{
+h2 {
     text-align: center;
 }
 
@@ -65,19 +75,7 @@ section.intro h1 {
     grid-column: 2/7;
 }
 
-// section.intro::before{
-//     content: '';
-//     display: inline;
-//     /* width: 100%; */
-//     height: 3em;
-//     /* margin: 0 auto -26em; */
-//     margin: 0em 0em;
-//     background: url('images/svg2.svg') no-repeat center;
-//     grid-row: 1/2;
-//     grid-column: 1/2;
-// }
-
-.intro h2{
+.intro h2 {
     font-size: 2em;
     padding: 0;
     margin: 0;
@@ -85,21 +83,20 @@ section.intro h1 {
     margin-bottom: -.4em;
 }
 
-
 #zen-summary p:nth-child(1) {
     font-weight: bold;
     font-size: 1.5em;
     padding-bottom: 20px;
     border-bottom: solid black 1px;
-    //  margin-top: -100px;
 }
 
 @keyframes scroll {
     from {
-      transform: translateX(100%);
+        transform: translateX(100%);
     }
+
     to {
-      transform: translateX(-100%);
+        transform: translateX(-100%);
     }
 }
 
@@ -110,46 +107,40 @@ section.intro h1 {
     transform: translateX(50%);
     animation: scroll 20s linear infinite;
     overflow: hidden;
-    //  margin-top: -100px;
 }
 
 #zen-preamble {
     border-top: solid black 1px;
     padding-top: 20px;
-   
 }
 
-h3{
-    margin-top:0;
+h3 {
+    margin-top: 0;
 }
 
 #zen-preamble p,
 #zen-requirements p {
     margin-top: -15px;
 }
-#zen-summary{
+
+#zen-summary {
     overflow: hidden;
 }
+
 #zen-intro::after {
     content: '';
     display: block;
-    /* width: 100%; */
     height: 30em;
-    /* margin: 0 auto -26em; */
     margin: 2em 1em;
     background: url('images/paperman-large.jpg') no-repeat center;
-
 }
 
 #zen-participation::after {
     content: '';
     display: block;
-    /* width: 100%; */
     height: 26em;
-    /* margin: 0 auto -26em; */
     margin: 2em 4em;
     background: url('images/clock-small.jpg') no-repeat center;
-
 }
 
 #zen-explanation,
@@ -169,8 +160,8 @@ h3{
 
 #design-selection ul {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     text-decoration: none;
     list-style-type: none;
     background-color: $color-2;
@@ -181,7 +172,6 @@ h3{
 
     &a {
         text-decoration: none;
-        
     }
 }
 
@@ -198,7 +188,6 @@ h3{
         text-align: center;
     }
 }
-
 
 .designer-name {
     grid-row: 3/4;
@@ -229,23 +218,21 @@ h3{
         text-decoration: none;
         color: $color-5;
     }
-    & a:hover{
+
+    & a:hover {
         @include hover;
     }
-
 }
 
 #zen-resources::before {
     content: '';
     display: block;
-    /* width: 100%; */
     height: 26em;
-    /* margin: 0 auto -26em; */
     margin: 1em 1em;
     background: url('images/carman-small.jpg') no-repeat center;
 }
 
-#zen-resources h3{
+#zen-resources h3 {
     padding: 1em;
     margin-bottom: 0;
 }
@@ -253,34 +240,43 @@ h3{
 #zen-resources ul {
     margin-top: 0;
     padding-left: 20px;
+
     & a {
         margin-top: -1em;
     }
-
 
     & li {
         list-style-type: none;
     }
 }
 
-.extra1{
-    background-image: url(images/local_7.svg);
+.extra1 {
+    background-image: url("images/local_7.svg");
     height: 20px;
     background-repeat: repeat;
     background-position: center;
-    margin-bottom: 20px;
+    margin: -40px 0px 70px 0px;
 }
+
+
+@media only screen and (max-width: 600px) {
+ p, h3{
+     padding: .5em;
+ }
+}
+
+// All Above Valid
 @media only screen and (min-width: 600px) {
     .page-wrapper {
         display: grid;
-        grid-template-rows: repeat(3, auto);
+        grid-template-rows: auto auto auto;
     }
 
     //header wrapper
     #zen-intro {
         display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        grid-template-rows: repeat(4, auto);
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto auto;
         row-gap: 0;
         padding: 2em 3em;
         grid-row: 1/2;
@@ -296,7 +292,6 @@ h3{
         max-width: 43vw;
         grid-column: 1/4;
         grid-row: 2/3;
-
     }
 
     //road
@@ -315,8 +310,8 @@ h3{
     //second wrapper
     #zen-supporting {
         display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: repeat(3, auto);
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto;
         row-gap: 1.5em;
         padding: 2em 3em;
         grid-row: 3/4;
@@ -344,14 +339,12 @@ h3{
         @include border;
     }
 
-
     //benefits
     #zen-benefits {
         grid-column: 4/7;
         grid-row: 1/2;
         background-color: white;
         color: black;
-
     }
 
     //requirements
@@ -372,7 +365,6 @@ h3{
         align-self: center;
         font-size: 1.5em;
         text-align: center;
-
     }
 
     #zen-participation::after {
@@ -385,15 +377,13 @@ h3{
         height: 10em;
         margin: 0 1em 0em 1em;
         background: url('images/carman-large.jpg') no-repeat center;
-        // grid-column: 4/7;
-        // grid-row: 1/2;
     }
 
     //last wrapper
     aside .wrapper {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(1, auto);
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
         grid-row: 2/3;
     }
 
@@ -417,7 +407,6 @@ h3{
         }
     }
 
-
     //archives
     #design-archives {
         grid-column: 3/4;
@@ -430,7 +419,6 @@ h3{
             padding: 10px;
             margin: 0;
         }
-
     }
 
     //resources
@@ -438,7 +426,6 @@ h3{
         grid-column: 1/2;
         grid-row: 1/2;
         background-color: $color-4;
-
     }
 
     #zen-resources::before {
@@ -448,9 +435,7 @@ h3{
     #zen-resources::after {
         content: '';
         display: block;
-        /* width: 100%; */
         height: 26em;
-        /* margin: 0 auto -26em; */
         margin: 1em 1em;
         background: url('images/typewriter-small.jpg') no-repeat center;
         grid-column: 1/2;
@@ -460,27 +445,70 @@ h3{
     #design-archives::after {
         content: '';
         display: block;
-        /* width: 100%; */
         height: 26em;
-        /* margin: 0 auto -26em; */
         margin: 1em 1em;
         background: url('images/camera-large.jpg') no-repeat center;
         grid-column: 3/4;
         grid-row: 2/3;
     }
+
     #zen-explanation,
     #zen-benefits {
         background-color: transparent;
     }
-
 }
 
+// extra
+.page-wrapper {
+    background: url('images/background2.jpg') repeat;
+    box-shadow: 0 0 10rem black, 0 0 2rem black, ;
+    margin-top: 2rem;
+    margin-bottom: -4rem;
+    padding-bottom: 4rem;
+}
 
-// #design-selection nav ul li {
-//     color: red;
-//     visibility: hidden;
-// }
-// #design-selection nav ul li a {
-//     color: green;
-//     visibility: visible;
-// }
+#css-zen-garden {
+    background: url('images/wood-table-top.jpg') repeat;
+    max-width: 80rem;
+    margin: auto;
+}
+
+.extra1 {
+    margin-bottom: 5rem;
+}
+
+div#zen-preamble {
+    columns: auto 10rem;
+}
+
+#design-selection ul {
+    background: none;
+}
+
+#design-selection h3 {
+    background: none;
+    background-color: $color-1;
+}
+
+#design-archives h3 {
+    background: none;
+    background-color: $color-1;
+}
+
+@media only screen and (min-width: 1400px) {
+    #zen-preamble {
+        max-width: 600px;
+    }
+
+    #zen-explanation {
+        max-width: 700px;
+    }
+    //requirements
+    #zen-requirements {
+        max-width: 700px;
+    }
+
+    #zen-participation {
+        max-width: 490px;
+    }
+}
